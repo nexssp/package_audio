@@ -4,7 +4,7 @@
   "description": "Split audio to the separate tracks",
   "main": "index.js",
   "scripts": {
-    "init": "nexssp-ensure ffmpeg"
+    "install-pkg": "nexssp-ensure ffmpeg"
   },
   "keywords": [],
   "author": "",

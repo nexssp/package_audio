@@ -3,6 +3,9 @@ name: Split
 version: 1
 files:
   - name: src/split.py
+commands:
+  - name: init
+    command: npm install && npm run install-pkg
 errors:
   "load save_path when it is None":
     "Probably the predefined folder hasn't been downloaded correctly.
