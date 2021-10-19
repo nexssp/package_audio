@@ -1,0 +1,9 @@
+name: Split
+# debug: true
+version: 1
+files:
+  - name: src/split.py
+errors:
+  "load save_path when it is None":
+    "Probably the predefined folder hasn't been downloaded correctly.
+    Please go to the Audio/Split package and delete 'pretrained_models' folder."
