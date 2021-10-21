@@ -9,13 +9,13 @@ import os
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # 0,1,2,3
 
-import pip
-pip.main(["install", "spleeter"])
-
 sys.path.append(os.path.join(os.getenv(
     "NEXSS_PACKAGES_PATH"), "Nexss", "Lib"))
 
 from NexssLog import nxsInfo, nxsOk, nxsWarn, nxsError
+from NexssInstall import nxsEnsure
+
+nxsEnsure('spleeter')
 
 # STDIN
 NexssStdin = sys.stdin.read()
