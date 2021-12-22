@@ -6,8 +6,20 @@ import json
 import sys
 import io
 import os
+import errno
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # 0,1,2,3
+
+p = os.path
+pretranedModelsPath = p.realpath(p.dirname(p.abspath(__file__))+"/../pretrained_models")
+
+try:
+    os.makedirs(pretranedModelsPath)
+except OSError as e:
+    if e.errno != errno.EEXIST:
+        raise
+
+os.environ['MODEL_PATH'] = pretranedModelsPath
 
 sys.path.append(os.path.join(os.getenv(
     "NEXSS_PACKAGES_PATH"), "Nexss", "Lib"))
